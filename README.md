@@ -1,109 +1,74 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <title>Password Cracker v1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алмаз Генератор</title>
     <style>
         body {
-            background-color: #000;
-            color: #0f0;
-            font-family: 'Courier New', monospace;
-            padding: 20px;
-        }
-        
-        .container {
-            border: 2px solid #0f0;
-            padding: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .title {
+            background-color: black;
+            color: lime;
             text-align: center;
-            font-size: 24px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
+            font-family: Arial, sans-serif;
         }
-        
-        .section {
-            margin: 15px 0;
+        .container {
+            margin-top: 50px;
+        }
+        input {
+            background: black;
+            color: lime;
+            border: 1px solid lime;
             padding: 10px;
-            border-left: 3px solid #0f0;
+            font-size: 18px;
+            text-align: center;
         }
-        
-        button {
-            background: #000;
-            color: #0f0;
-            border: 1px solid #0f0;
-            padding: 10px 20px;
-            cursor: pointer;
+        #randomNumbers {
+            font-size: 20px;
             margin-top: 20px;
         }
-        
-        button:hover {
-            background: #0f0;
-            color: #000;
+        .diamond {
+            width: 100px;
+            height: 100px;
         }
-        
-        .console {
-            background: #002200;
-            padding: 15px;
+        .link {
             margin-top: 20px;
-            height: 150px;
-            overflow-y: auto;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="title">Взломник паролей</div>
-        
-        <div class="section">
-            <h3>Вопросы паролей (Стоимость: 5,00 руб.)</h3>
-            <div class="sub-section">
-                <p>Сборка: 1,00 руб.</p>
-                <p>Проверка: 0,00 руб.</p>
-            </div>
-        </div>
 
-        <div class="section">
-            <h3>Баллы данных:</h3>
-            <p>▸ Основной балл: 1000 руб.</p>
-            <p>▸ Сборка: 50 руб.</p>
-            <p>▸ Резервный балл: 200 руб.</p>
-            <p>▸ Консоль программы: 500 руб.</p>
-        </div>
+<div class="container">
+    <h1>Алмаз Генератор</h1>
+    <p>ID енгізіңіз (12 сан):</p>
+    <input type="text" id="idInput" maxlength="12" placeholder="ID">
+    <p>Қосымша 5 сан:</p>
+    <input type="text" id="extraInput" maxlength="5" placeholder="5 сан">
+    
+    <p><img src="https://cdn-icons-png.flaticon.com/512/1820/1820899.png" class="diamond"></p>
+    
+    <p id="randomNumbers">Сандар генерациясы күтілуде...</p>
+    
+    <p class="link">
+        <a href="https://www.tiktok.com/@ff_sns22?_t=ZS-8tiOHTkfb5G&_r=1" target="_blank">
+            Осы сілтемеге тіркеліңіз
+        </a>
+    </p>
+    
+    <p>⚠️ Алмаз 12 сағат ішінде түседі!</p>
+</div>
 
-        <div class="console" id="console">
-            > Система инициализирована<br>
-            > Готово к работе
-        </div>
-
-        <button onclick="startHack()">НАЧАТЬ ВЗЛОМ</button>
-    </div>
-
-    <script>
-        function startHack() {
-            const consoleElem = document.getElementById('console');
-            consoleElem.innerHTML += '<br>> Начата процедура взлома...';
-            
-            const messages = [
-                'Анализ структуры пароля...',
-                'Подбор хэш-ключей...',
-                'Обход защиты... 23%',
-                'Перехват пакетов...',
-                'Дешифровка завершена!',
-                'Доступ получен!'
-            ];
-
-            let delay = 2000;
-            messages.forEach((msg, index) => {
-                setTimeout(() => {
-                    consoleElem.innerHTML += `<br>> ${msg}`;
-                    consoleElem.scrollTop = consoleElem.scrollHeight;
-                }, delay * index);
-            });
+<script>
+    function generateRandomNumbers() {
+        let numbers = [];
+        for (let i = 0; i < 6; i++) {
+            numbers.push(Math.floor(Math.random() * 10000));
         }
-    </script>
+        document.getElementById("randomNumbers").innerText = "Генерация: " + numbers.join(" - ");
+    }
+
+    setInterval(generateRandomNumbers, 3000);
+</script>
+
 </body>
 </html>
