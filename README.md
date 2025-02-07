@@ -51,7 +51,7 @@
     <p> количество алмазов:</p>
     <input type="text" id="extraInput" maxlength="5" placeholder="5 сан">
     
-    <p><img src="https://cdn-icons-png.flaticon.com/512/3076/3076746.png" class="hacker"></p>
+    <p><img src="https://yt3.googleusercontent.com/rt855NZ6C3MYfNsekzonK483XJyZBS_3LIFzbCXpwKx0AD8HUJqmCcjN8nN3eMa6-UE6QNPJZg=s900-c-k-c0x00ffffff-no-rj" class="hacker"></p>
     
     <p id="randomNumbers">Сандар генерациясы күтілуде...</p>
     
