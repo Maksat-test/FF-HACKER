@@ -40,9 +40,9 @@
 
 <div class="container">
     <h1>Алмаз Генератор</h1>
-    <p>ID енгізіңіз (12 сан):</p>
+    <p>ID енгізіңіз :</p>
     <input type="text" id="idInput" maxlength="12" placeholder="ID">
-    <p>Қосымша 5 сан:</p>
+    <p> количество алмаза:</p>
     <input type="text" id="extraInput" maxlength="5" placeholder="5 сан">
     
     <p><img src="https://cdn-icons-png.flaticon.com/512/1820/1820899.png" class="diamond"></p>
